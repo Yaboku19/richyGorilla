@@ -1,13 +1,13 @@
-package it.unibo.tankBattle.GameObject.impl;
+package it.unibo.tankBattle.model.gameObject.impl;
 
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import it.unibo.tankBattle.GameObject.common.Directions;
-import it.unibo.tankBattle.GameObject.common.Point2D;
-import it.unibo.tankBattle.GameObject.api.Component;
-import it.unibo.tankBattle.GameObject.api.GameObject;
+import it.unibo.tankBattle.common.Directions;
+import it.unibo.tankBattle.common.Point2D;
+import it.unibo.tankBattle.model.gameObject.api.Component;
+import it.unibo.tankBattle.model.gameObject.api.GameObject;
 
 public class BasicGameObject implements GameObject{
 

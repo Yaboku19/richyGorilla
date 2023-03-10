@@ -1,4 +1,4 @@
-package it.unibo.tankBattle.GameObject.impl;
+package it.unibo.tankBattle.model.gameObject.impl;
 
 public class DamageComponent extends AbstractComponent {
 

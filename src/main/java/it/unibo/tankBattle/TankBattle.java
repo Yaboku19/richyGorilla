@@ -1,11 +1,11 @@
 package it.unibo.tankBattle;
 
-import it.unibo.tankBattle.GameObject.common.Directions;
-import it.unibo.tankBattle.GameObject.common.Point2D;
-import it.unibo.tankBattle.GameObject.impl.GameObjectFactoryImpl;
-import it.unibo.tankBattle.GameObject.impl.LifepointsComponent;
-import it.unibo.tankBattle.GameObject.impl.MovingComponent;
-import it.unibo.tankBattle.GameObject.api.GameObjectFactory;
+import it.unibo.tankBattle.common.Directions;
+import it.unibo.tankBattle.common.Point2D;
+import it.unibo.tankBattle.model.gameObject.api.GameObjectFactory;
+import it.unibo.tankBattle.model.gameObject.impl.GameObjectFactoryImpl;
+import it.unibo.tankBattle.model.gameObject.impl.LifepointsComponent;
+import it.unibo.tankBattle.model.gameObject.impl.MovingComponent;
 
 public class TankBattle {
     public static void main(String[] arg) {
