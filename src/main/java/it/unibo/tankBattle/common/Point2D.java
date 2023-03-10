@@ -1,4 +1,4 @@
-package it.unibo.tankBattle.GameObject.common;
+package it.unibo.tankBattle.common;
 
 public class Point2D {
     

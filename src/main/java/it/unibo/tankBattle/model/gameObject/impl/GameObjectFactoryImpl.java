@@ -1,9 +1,9 @@
-package it.unibo.tankBattle.GameObject.impl;
+package it.unibo.tankBattle.model.gameObject.impl;
 
-import it.unibo.tankBattle.GameObject.common.Directions;
-import it.unibo.tankBattle.GameObject.common.Point2D;
-import it.unibo.tankBattle.GameObject.api.GameObject;
-import it.unibo.tankBattle.GameObject.api.GameObjectFactory;
+import it.unibo.tankBattle.common.Directions;
+import it.unibo.tankBattle.common.Point2D;
+import it.unibo.tankBattle.model.gameObject.api.GameObject;
+import it.unibo.tankBattle.model.gameObject.api.GameObjectFactory;
 
 public class GameObjectFactoryImpl implements GameObjectFactory{
 

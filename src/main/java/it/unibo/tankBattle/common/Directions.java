@@ -1,4 +1,4 @@
-package it.unibo.tankBattle.GameObject.common;
+package it.unibo.tankBattle.common;
 
 /**
  * Directions that can be used by the player
