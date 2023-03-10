@@ -9,7 +9,7 @@ import it.unibo.tankBattle.model.world.api.World;
 public class WorldImpl implements World{
     private final Set<GameObject> setGameObject;
 
-    public WorldImpl (final Stream<GameObject> streamGameObject) {
+    protected WorldImpl (final Stream<GameObject> streamGameObject) {
         setGameObject = streamGameObject.collect(Collectors.toSet());
     }
 
