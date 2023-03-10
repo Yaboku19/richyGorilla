@@ -13,11 +13,15 @@ public class BasicGameObject implements GameObject{
 
     private Point2D position;
     private Directions direction;
+    private double length;
+    private double width;
     private final Set<Component> components = new HashSet<>();
 
-    public BasicGameObject(Point2D position, Directions direction) {
+    public BasicGameObject(Point2D position, double length, double width) {
         this.position = position;
-        this.direction = direction;
+        this.length = length;
+        this.width = width;
+        this.direction = Directions.NONE;
     }
 
     @Override
@@ -57,6 +61,16 @@ public class BasicGameObject implements GameObject{
     @Override
     public void setDirection(Directions dir) {
         this.direction = dir;
+    }
+
+    @Override
+    public double getLength() {
+        return this.length;
+    }
+
+    @Override
+    public double getWidth() {
+        return this.width;
     }
 
    

@@ -27,4 +27,8 @@ public interface GameObject {
 
     public void setDirection(Directions dir);
 
+    public double getWidth();
+
+    public double getLength();
+
 }

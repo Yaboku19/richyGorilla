@@ -10,8 +10,8 @@ import it.unibo.tankBattle.model.gameObject.impl.MovingComponent;
 public class TankBattle {
     public static void main(String[] arg) {
         GameObjectFactory factory = new GameObjectFactoryImpl();
-        var tank = factory.createTank(new Point2D(10, 10), Directions.UP);
-        var bullet = factory.createBullet(new Point2D(0, 0));
+        var tank = factory.createTank(new Point2D(10, 10));
+        var bullet = factory.createBullet(tank);
         tank.setDirection(Directions.DOWN);
         System.out.println(tank.getDirection());
         tank.getComponent(MovingComponent.class).ifPresent(c -> System.out.println(c.getSpeed()));
