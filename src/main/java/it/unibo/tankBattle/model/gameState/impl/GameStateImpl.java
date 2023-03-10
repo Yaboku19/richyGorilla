@@ -24,8 +24,7 @@ public class GameStateImpl implements GameState {
 
     @Override
     public void update(Double time) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+        world.getEntities().forEach(g -> g.update(time));
     }
 
     @Override
