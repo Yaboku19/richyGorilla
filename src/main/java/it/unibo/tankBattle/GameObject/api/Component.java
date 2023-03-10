@@ -1,4 +1,4 @@
-package it.unibo.GameObject.api;
+package it.unibo.tankBattle.GameObject.api;
 
 public interface Component {
 
