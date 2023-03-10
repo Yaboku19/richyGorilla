@@ -5,7 +5,9 @@ import java.util.stream.Stream;
 import it.unibo.tankBattle.common.Directions;
 import it.unibo.tankBattle.model.gameObject.api.GameObject;
 
-public interface Gamestate {
+public interface GameState {
+    public void createWorld();
+
     public void update(Double time);
 
     public void shot(int player);
