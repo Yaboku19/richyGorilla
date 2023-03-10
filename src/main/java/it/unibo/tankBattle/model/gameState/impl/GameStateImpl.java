@@ -7,14 +7,14 @@ import it.unibo.tankBattle.model.gameObject.api.GameObject;
 import it.unibo.tankBattle.model.gameState.api.GameState;
 import it.unibo.tankBattle.model.world.api.FactoryWorld;
 import it.unibo.tankBattle.model.world.api.World;
-import it.unibo.tankBattle.model.world.impl.FacotryWorldImpl;
+import it.unibo.tankBattle.model.world.impl.FactoryWorldImpl;
 
 public class GameStateImpl implements GameState {
     private final FactoryWorld factoryWorld;
     private World world = null;
 
     public GameStateImpl() {
-        factoryWorld = new FacotryWorldImpl();
+        factoryWorld = new FactoryWorldImpl();
     }
 
     @Override
