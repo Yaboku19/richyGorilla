@@ -45,6 +45,8 @@ public class BasicGameObject implements GameObject{
     @Override
     public GameObject addComponent(Component component) {
         this.components.add(component);
+        if(component instanceof AbstractComponent)
+            ((AbstractComponent) component).setGameObject(this);
         return this;
     }
 
@@ -72,7 +74,11 @@ public class BasicGameObject implements GameObject{
     public double getWidth() {
         return this.width;
     }
-
+    
+    @Override
+    public void setPosition(Point2D position) {
+        this.position = position;
+    }
    
     
 }

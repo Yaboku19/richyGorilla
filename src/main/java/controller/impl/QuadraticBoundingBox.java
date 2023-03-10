@@ -47,7 +47,7 @@ public class QuadraticBoundingBox implements BoundingBox{
     }
     
     @Override
-    public boolean isColliding(Point2D centerObject1, int lengthObject1, Point2D centerObject2, int lengthObject2) {
+    public boolean isColliding(Point2D centerObject1, int lengthObject1, int widthObj1,Point2D centerObject2, int lengthObject2, int widthObj2) {
         for (Point2D x : this.objectArea(centerObject2, lengthObject2).toList()) {
             if (this.objectArea(centerObject1, lengthObject1).toList().contains(x)) {
                 return true;

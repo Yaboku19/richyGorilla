@@ -6,6 +6,7 @@ import it.unibo.tankBattle.model.gameObject.api.GameObjectFactory;
 import it.unibo.tankBattle.model.gameObject.impl.GameObjectFactoryImpl;
 import it.unibo.tankBattle.model.gameObject.impl.LifepointsComponent;
 import it.unibo.tankBattle.model.gameObject.impl.MovingComponent;
+import it.unibo.tankBattle.model.gameObject.impl.TankCollisionComponent;
 
 public class TankBattle {
     public static void main(String[] arg) {
@@ -16,6 +17,7 @@ public class TankBattle {
         System.out.println(tank.getDirection());
         tank.getComponent(MovingComponent.class).ifPresent(c -> System.out.println(c.getSpeed()));
         bullet.getComponent(LifepointsComponent.class).ifPresent(c -> System.out.println(c.getLifePoints()));
+        tank.getComponent(TankCollisionComponent.class).ifPresent(coll -> coll.resolveCollision(bullet));
 
     }
 }

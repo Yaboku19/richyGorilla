@@ -31,4 +31,6 @@ public interface GameObject {
 
     public double getLength();
 
+    public void setPosition(Point2D position);
+
 }

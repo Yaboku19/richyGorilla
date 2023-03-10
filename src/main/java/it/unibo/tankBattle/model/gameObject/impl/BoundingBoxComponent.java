@@ -1,6 +1,6 @@
 package it.unibo.tankBattle.model.gameObject.impl;
 
-public class CollisionComponent extends AbstractComponent{
+public class BoundingBoxComponent extends AbstractComponent{
 
     //boundingBox
 

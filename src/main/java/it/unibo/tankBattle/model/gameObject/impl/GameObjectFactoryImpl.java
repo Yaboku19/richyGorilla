@@ -11,14 +11,16 @@ public class GameObjectFactoryImpl implements GameObjectFactory {
         return new BasicGameObject(pos, 10, 10)
                 .addComponent(new MovingComponent(10))
                 .addComponent(new LifepointsComponent(100))
-                .addComponent(new CollisionComponent());
+                .addComponent(new BoundingBoxComponent())
+                .addComponent(new TankCollisionComponent());
     }
 
     @Override
     public GameObject createBullet(GameObject object) {
-        return new BasicGameObject(new Point2D( object.getPosition().getX(), object.getPosition().getY()), 5, 5)
+        return new BasicGameObject(new Point2D( object.getPosition().getX() + object.getDirection().getX()*object.getLength(), 
+        object.getPosition().getY() + object.getDirection().getY()*object.getWidth()), 5, 5)
                 .addComponent(new MovingComponent(10))
-                .addComponent(new CollisionComponent());
+                .addComponent(new BoundingBoxComponent());
     }
 
     @Override
