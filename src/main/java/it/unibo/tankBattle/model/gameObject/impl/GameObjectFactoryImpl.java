@@ -9,7 +9,7 @@ public class GameObjectFactoryImpl implements GameObjectFactory {
     @Override
     public GameObject createTank(Point2D pos) {
         return new BasicGameObject(pos, 10, 10)
-                .addComponent(new MovingComponent(10))
+                .addComponent(new MovingComponent(1))
                 .addComponent(new LifepointsComponent(100))
                 .addComponent(new BoundingBoxComponent())
                 .addComponent(new TankCollisionComponent());
@@ -20,13 +20,14 @@ public class GameObjectFactoryImpl implements GameObjectFactory {
         return new BasicGameObject(new Point2D( object.getPosition().getX() + object.getDirection().getX()*object.getLength(), 
         object.getPosition().getY() + object.getDirection().getY()*object.getWidth()), 5, 5)
                 .addComponent(new MovingComponent(10))
-                .addComponent(new BoundingBoxComponent());
+                .addComponent(new BoundingBoxComponent())
+                .addComponent(new DamageComponent(50));
     }
 
     @Override
     public GameObject createWall(Point2D pos) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createWall'");
+       return new BasicGameObject(pos, 10, 10)
+            .addComponent(new BoundingBoxComponent());
     }
     
 }
