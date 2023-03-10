@@ -8,6 +8,11 @@ public class LifepointsComponent extends AbstractComponent{
         this.lifePoints = lifePoints;
     }
 
+    @Override
+    public void update() {
+        
+    }
+
     public int getLifePoints() {
         return this.lifePoints;
     }
@@ -16,9 +21,8 @@ public class LifepointsComponent extends AbstractComponent{
         this.lifePoints = lifePoints - damage;
     }
 
-    @Override
-    public void update() {
-        
+    public boolean isAlive() {
+        return this.lifePoints>0;
     }
     
 }
