@@ -14,8 +14,8 @@ public class FactoryWorldImpl implements FactoryWorld{
 
     @Override
     public World simpleWorld() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'simpleWorld'");
+        // toDo
+        return null;
     }
     
 }
