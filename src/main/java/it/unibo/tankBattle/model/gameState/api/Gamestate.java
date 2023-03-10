@@ -1,7 +1,6 @@
 package it.unibo.tankBattle.model.gameState.api;
 
 import java.util.stream.Stream;
-
 import it.unibo.tankBattle.common.Directions;
 import it.unibo.tankBattle.model.gameObject.api.GameObject;
 
