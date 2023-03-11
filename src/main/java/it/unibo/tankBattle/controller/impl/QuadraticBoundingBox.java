@@ -1,9 +1,9 @@
-package controller.impl;
+package it.unibo.tankBattle.controller.impl;
 
 import java.util.stream.Stream;
 
-import controller.api.BoundingBox;
 import it.unibo.tankBattle.common.Point2D;
+import it.unibo.tankBattle.controller.api.BoundingBox;
 
 public class QuadraticBoundingBox implements BoundingBox{
     

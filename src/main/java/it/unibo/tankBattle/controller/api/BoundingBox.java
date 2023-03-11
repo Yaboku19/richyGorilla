@@ -1,4 +1,4 @@
-package controller.api;
+package it.unibo.tankBattle.controller.api;
 
 import it.unibo.tankBattle.common.Point2D;
 
