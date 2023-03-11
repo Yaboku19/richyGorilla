@@ -35,6 +35,9 @@ public class TestGameObject {
         tank1.getComponent(CollisionComponent.class).ifPresent(coll -> coll.resolveCollision(bullet2));
         assertEquals(50,tank1.getComponent(LifepointsComponent.class).get().getLifePoints());
         assertEquals(new Point2D(9,10), tank1.getPosition());
+        tank1.getComponent(CollisionComponent.class).ifPresent(coll -> coll.resolveCollision(tank2));
+        assertEquals(50,tank1.getComponent(LifepointsComponent.class).get().getLifePoints());
+        assertEquals(new Point2D(8,10), tank1.getPosition());
     }
 
     @org.junit.jupiter.api.Test
