@@ -1,13 +1,15 @@
 package it.unibo.tankBattle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 import it.unibo.tankBattle.common.Point2D;
 import it.unibo.tankBattle.model.gameObject.api.GameObjectFactory;
-import static org.junit.jupiter.api.Assertions.*;
 import it.unibo.tankBattle.model.gameObject.impl.CollisionComponent;
 import it.unibo.tankBattle.model.gameObject.impl.GameObjectFactoryImpl;
 
 public class TestGameObject {
     
-    GameObjectFactory factory;
+    private GameObjectFactory factory;
 
     @org.junit.jupiter.api.BeforeEach
     public void initFactory() {

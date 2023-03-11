@@ -1,6 +1,6 @@
-package it.unibo.tankBattle.model.gameObject.impl;
+package it.unibo.tankBattle.model.gameObject.api;
 
-import it.unibo.tankBattle.model.gameObject.api.GameObject;
+import it.unibo.tankBattle.model.gameObject.impl.AbstractComponent;
 
 public abstract class CollisionComponent extends AbstractComponent{
 

@@ -2,6 +2,7 @@ package it.unibo.tankBattle.model.gameObject.impl;
 
 import it.unibo.tankBattle.common.Directions;
 import it.unibo.tankBattle.common.Point2D;
+import it.unibo.tankBattle.model.gameObject.api.CollisionComponent;
 import it.unibo.tankBattle.model.gameObject.api.GameObject;
 
 public class TankCollisionComponent extends CollisionComponent {
@@ -15,6 +16,7 @@ public class TankCollisionComponent extends CollisionComponent {
 
     @Override
     public void resolveCollision(GameObject obj) {
+        /** to knockback the object */
         if(this.getGameObject().getComponent(MovingComponent.class).isPresent()) {
             var speed = this.getGameObject().getComponent(MovingComponent.class).get().getSpeed();
             Directions dir = this.manageCollision(obj.getPosition());
@@ -22,6 +24,7 @@ public class TankCollisionComponent extends CollisionComponent {
             this.getGameObject().setPosition(new Point2D(this.getGameObject().getPosition().getX() + dir.getX()*speed,
                     this.getGameObject().getPosition().getY() + dir.getY()*speed));
         }
+        /** to reduce lp */
         if(obj.getComponent(DamageComponent.class).isPresent() && 
         this.getGameObject().getComponent(LifepointsComponent.class).isPresent()) {
             this.getGameObject().getComponent(LifepointsComponent.class).get()

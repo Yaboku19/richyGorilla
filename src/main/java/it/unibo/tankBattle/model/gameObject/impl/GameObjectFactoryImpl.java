@@ -11,7 +11,6 @@ public class GameObjectFactoryImpl implements GameObjectFactory {
         return new BasicGameObject(pos, 10, 10)
                 .addComponent(new MovingComponent(1))
                 .addComponent(new LifepointsComponent(100))
-                .addComponent(new BoundingBoxComponent())
                 .addComponent(new TankCollisionComponent());
     }
 
@@ -20,8 +19,9 @@ public class GameObjectFactoryImpl implements GameObjectFactory {
         return new BasicGameObject(new Point2D( object.getPosition().getX() + object.getDirection().getX()*object.getLength(), 
         object.getPosition().getY() + object.getDirection().getY()*object.getWidth()), 5, 5)
                 .addComponent(new MovingComponent(10))
-                .addComponent(new BoundingBoxComponent())
-                .addComponent(new DamageComponent(50));
+                .addComponent(new DamageComponent(50))
+                .addComponent(new BulletLifeComponent())
+                .addComponent(new BulletCollisionComponent());
     }
 
     @Override

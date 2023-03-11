@@ -2,8 +2,8 @@ package it.unibo.tankBattle;
 
 import it.unibo.tankBattle.common.Directions;
 import it.unibo.tankBattle.common.Point2D;
+import it.unibo.tankBattle.model.gameObject.api.CollisionComponent;
 import it.unibo.tankBattle.model.gameObject.api.GameObjectFactory;
-import it.unibo.tankBattle.model.gameObject.impl.CollisionComponent;
 import it.unibo.tankBattle.model.gameObject.impl.GameObjectFactoryImpl;
 import it.unibo.tankBattle.model.gameObject.impl.LifepointsComponent;
 import it.unibo.tankBattle.model.gameObject.impl.MovingComponent;

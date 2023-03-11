@@ -1,10 +1,12 @@
 package it.unibo.tankBattle.model.gameObject.impl;
 
-public class LifepointsComponent extends AbstractComponent{
+import it.unibo.tankBattle.model.gameObject.api.LifeComponent;
+
+public class LifepointsComponent extends LifeComponent{
 
     private int lifePoints;
 
-    public LifepointsComponent(int lifePoints) {
+    public LifepointsComponent(final int lifePoints) {
         this.lifePoints = lifePoints;
     }
 
@@ -13,16 +15,19 @@ public class LifepointsComponent extends AbstractComponent{
         
     }
 
+    @Override
+    public boolean isAlive() {
+        return this.lifePoints>0;
+    }
+
     public int getLifePoints() {
         return this.lifePoints;
     }
 
-    public void decreaseLifepoints(int damage) {
+    protected void decreaseLifepoints(final int damage) {
         this.lifePoints = lifePoints - damage;
     }
 
-    public boolean isAlive() {
-        return this.lifePoints>0;
-    }
+    
     
 }
