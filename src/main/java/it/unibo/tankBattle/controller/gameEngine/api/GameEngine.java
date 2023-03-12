@@ -1,5 +1,5 @@
 package it.unibo.tankBattle.controller.gameEngine.api;
 
-public interface GameEngine extends WorldEventListener{
+public interface GameEngine {
     
 }
